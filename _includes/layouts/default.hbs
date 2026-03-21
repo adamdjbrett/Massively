@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{#if description}}{{description}}{{else}}{{metadata.description}}{{/if}}" />
   <meta name="generator" content="{{ eleventy.generator }}" />
+  <link rel="icon" type="image/svg+xml" href="{{#if metadata.icon}}{{metadata.icon}}{{else}}/assets/images/11ty.svg{{/if}}" />
+  <link rel="alternate" type="application/atom+xml" title="{{metadata.title}}" href="/feed/feed.xml" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
   <link rel="stylesheet" type="text/css" href="/assets/main/css/main.css" />
   <noscript><link rel="stylesheet" href="/assets/main/css/noscript.css" /></noscript>

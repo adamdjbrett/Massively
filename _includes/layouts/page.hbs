@@ -1,0 +1,20 @@
+---
+layout: layouts/default.hbs
+---
+<main id="main">
+  <section class="post">
+    <header class="major">
+      <h1>{{title}}</h1>
+    </header>
+
+    {{#if feature_image}}
+    <figure class="image main">
+      <img src="{{feature_image}}" alt="{{title}}" />
+    </figure>
+    {{/if}}
+
+    <div class="content">
+      {{{ content }}}
+    </div>
+  </section>
+</main>

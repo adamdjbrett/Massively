@@ -1,0 +1,10 @@
+<nav id="nav">
+  <ul class="links">
+    {{#each metadata.navigation}}
+    <li class="nav-{{slug}} {{#if (isCurrent @root.page.url url)}}active{{/if}}"><a href="{{url}}">{{label}}</a></li>
+    {{/each}}
+  </ul>
+  <ul class="icons">
+    <li><a href="/feed/feed.xml" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+  </ul>
+</nav>

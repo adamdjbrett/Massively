@@ -1,0 +1,45 @@
+---
+layout: layouts/default.hbs
+isHome: true
+bodyClass: home-template
+---
+<main id="main">
+
+  {{#if collections.posts.[0]}}
+  <article class="post featured">
+    <header class="major">
+      <span class="date">{{readableDate collections.posts.[0].page.date "MMM d, yyyy"}}</span>
+      <h2><a href="{{collections.posts.[0].url}}">{{collections.posts.[0].data.title}}</a></h2>
+      <p>{{excerptWords collections.posts.[0].templateContent 44}}</p>
+    </header>
+    {{#if collections.posts.[0].data.feature_image}}
+    <a href="{{collections.posts.[0].url}}" class="image main"><img src="{{collections.posts.[0].data.feature_image}}" alt="{{collections.posts.[0].data.title}}" /></a>
+    {{/if}}
+    <ul class="actions special">
+      <li><a href="{{collections.posts.[0].url}}" class="button large">Full Story</a></li>
+    </ul>
+  </article>
+  {{/if}}
+
+  <section class="posts">
+    {{#each collections.posts}}
+      {{#unless @first}}
+      <article>
+        <header>
+          <span class="date">{{readableDate page.date "MMM d, yyyy"}}</span>
+          <h2><a href="{{url}}">{{data.title}}</a></h2>
+        </header>
+        {{#if data.feature_image}}
+        <a href="{{url}}" class="image fit"><img src="{{data.feature_image}}" alt="{{data.title}}" /></a>
+        {{/if}}
+        <p>{{excerptWords templateContent 33}}</p>
+        <ul class="actions special">
+          <li><a href="{{url}}" class="button">Full Story</a></li>
+        </ul>
+      </article>
+      {{/unless}}
+    {{/each}}
+  </section>
+
+  {{> "pagination"}}
+</main>

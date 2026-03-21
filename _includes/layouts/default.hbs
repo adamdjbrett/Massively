@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{metadata.language}}">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{#if title}}{{title}} | {{metadata.title}}{{else}}{{metadata.title}}{{/if}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{#if description}}{{description}}{{else}}{{metadata.description}}{{/if}}" />
+
+  <link rel="stylesheet" type="text/css" href="/assets/main/css/main.css" />
+  <noscript><link rel="stylesheet" href="/assets/main/css/noscript.css" /></noscript>
+
+  {{#if metadata.coverImage}}
+  <style>#wrapper>.bg {background-image: url(/assets/images/overlay.png),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("{{metadata.coverImage}}") }</style>
+  {{/if}}
+</head>
+<body class="is-preload {{bodyClass}}">
+
+  <div id="wrapper" {{#if isHome}}class="fade-in"{{/if}}>
+
+    {{#if isHome}}
+    <div id="intro">
+      <h1>{{metadata.title}}</h1>
+      <p>{{metadata.description}}</p>
+      <ul class="actions">
+        <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+      </ul>
+    </div>
+    {{/if}}
+
+    <header id="header">
+      {{#if metadata.logo}}
+        <a href="{{metadata.url}}" class="logo image"><img src="{{metadata.logo}}" alt="{{metadata.title}}" /></a>
+      {{else}}
+        <a href="{{metadata.url}}" class="logo">{{metadata.title}}</a>
+      {{/if}}
+    </header>
+
+    {{> "navigation"}}
+
+    {{{ content }}}
+
+    {{> "copyright"}}
+
+  </div>
+
+  <script src="/assets/main/js/jquery.min.js"></script>
+  <script src="/assets/main/js/jquery.scrollex.min.js"></script>
+  <script src="/assets/main/js/jquery.scrolly.min.js"></script>
+  <script src="/assets/main/js/browser.min.js"></script>
+  <script src="/assets/main/js/breakpoints.min.js"></script>
+  <script src="/assets/main/js/util.js"></script>
+  <script src="/assets/main/js/main.js"></script>
+
+</body>
+</html>

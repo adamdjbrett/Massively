@@ -1,0 +1,24 @@
+---
+layout: layouts/default.hbs
+---
+<main id="main">
+  <section class="post">
+    <header class="major">
+      <span class="date">{{readableDate page.date "MMMM d, yyyy"}}</span>
+      <h1>{{title}}</h1>
+      {{#if description}}
+        <p class="content">{{description}}</p>
+      {{/if}}
+    </header>
+
+    {{#if feature_image}}
+    <figure class="image main">
+      <img src="{{feature_image}}" alt="{{title}}" />
+    </figure>
+    {{/if}}
+
+    <div class="content">
+      {{{ content }}}
+    </div>
+  </section>
+</main>

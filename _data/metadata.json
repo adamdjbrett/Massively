@@ -1,0 +1,18 @@
+{
+  "title": "Massively",
+  "description": "A free, fully responsive theme created by HTML5 UP + Ghost and released completely free under the Creative Commons & MIT licenses",
+  "language": "en",
+  "author": "TryGhost",
+  "url": "http://localhost:8080",
+  "logo": null,
+  "icon": "/favicon.ico",
+  "coverImage": "/assets/images/bg.jpg",
+  "navigation": [
+    { "label": "Home", "url": "/", "slug": "home" },
+    { "label": "Tag", "url": "/tags/", "slug": "tag" },
+    { "label": "Author", "url": "/about/", "slug": "author" },
+    { "label": "Elements", "url": "/contact/", "slug": "elements" }
+  ],
+  "twitter": "",
+  "facebook": ""
+}

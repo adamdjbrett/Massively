@@ -1,0 +1,31 @@
+---
+layout: layouts/default.hbs
+title: Tags
+permalink: /tags/index.html
+---
+<main id="main">
+  <header class="tag-header">
+    <h1><a href="/tags/">Tags</a></h1>
+    <p>A collection of {{collections.tagList.length}} tags</p>
+  </header>
+
+  <section class="posts">
+    {{#each collections.posts}}
+    <article>
+      <header>
+        <span class="date">{{readableDate page.date "MMM d, yyyy"}}</span>
+        <h2><a href="{{url}}">{{data.title}}</a></h2>
+      </header>
+      {{#if data.feature_image}}
+      <a href="{{url}}" class="image fit"><img src="{{data.feature_image}}" alt="{{data.title}}" /></a>
+      {{/if}}
+      <p>{{excerptWords templateContent 33}}</p>
+      <ul class="actions special">
+        <li><a href="{{url}}" class="button">Full Story</a></li>
+      </ul>
+    </article>
+    {{/each}}
+  </section>
+
+  {{> "pagination"}}
+</main>

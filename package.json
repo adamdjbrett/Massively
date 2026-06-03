@@ -10,15 +10,17 @@
     "clean": "rm -rf _site"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=24",
+    "npm": ">=11.14.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.1.5",
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-footnote": "^4.0.0",
+    "handlebars": "^4.7.8",
     "luxon": "^3.5.0",
-    "handlebars": "^4.7.8"
-  }
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0"
+  },
+  "packageManager": "npm@11.14.0"
 }
